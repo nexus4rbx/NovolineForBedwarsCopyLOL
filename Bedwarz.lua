@@ -24,7 +24,7 @@ local MiscTab = Window:MakeTab({
 })
 
 -- Variables for cooldown
-local cooldown = 0.1
+--[[local cooldown = 0.1
 
 -- Function to change walk speed
 local function changeWalkSpeed(speed)
@@ -73,7 +73,7 @@ MainTab:AddToggle({
             breakAllBeds()
         end
     end
-})
+})--]]
 
 local killAllPlayersActive = false
 
@@ -118,7 +118,7 @@ MainTab:AddToggle({
 
 
 -- Function to give resources
-local function giveResource(resourceType, amount)
+--[[local function giveResource(resourceType, amount)
     local args = {
         [1] = resourceType,
         [2] = amount
@@ -307,7 +307,7 @@ MainTab:AddToggle({
             giveItem()
         end
     end
-})
+})--]]
 
 -- Health giver function
 local positiveHealthAmount = 0
@@ -486,7 +486,7 @@ MainTab:AddToggle({
 -- Add a textbox and toggle to the misc tab for changing walk speed
 MiscTab:AddTextbox({
     Name = "Walk Speed",
-    Default = "",
+    Default = "100",
     TextDisappear = true,
     Callback = function(value)
         local speed = tonumber(value)
